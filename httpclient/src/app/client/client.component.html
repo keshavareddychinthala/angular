@@ -1,0 +1,99 @@
+<p>client works!</p>
+{{r|json}}
+<table class="table" >
+<thead>
+    <th>id</th>
+    <th>name</th>
+    <th>salary</th>
+    <th>domain</th>
+
+</thead>
+<tbody>
+<tr *ngFor="let a of r">
+<td>{{a.id}}</td>
+<td>{{a.name}}</td>
+<td>{{a.salary}}</td>
+<td>{{a.domain}}</td>
+<td><button (click)="fs(a)" data-toggle="modal" data-target="#myModal">edit</button></td>
+<td><button (click)="fb(a.id)">delete</button></td>
+
+</tr>
+
+
+
+
+</tbody>
+
+
+
+
+</table>
+
+
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Update details</h4>
+        </div>
+        <div class="modal-body">
+         
+            <form #f="ngForm" class="form-group" (submit)="gh(f.value)" >
+                <h4>username</h4>
+                <input type="text" name="name" [(ngModel)]="name">
+                <input type="text" name="id" [(ngModel)]="id">
+                <h4>salary</h4>
+                <input type="number" name="salary"  [(ngModel)]="salary" >
+                <h4>domain</h4>
+                <input type="text" name="domain"  [(ngModel)]="domain" >
+                
+                <button>Update</button>
+                
+                </form>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button (click)="ff()">push</button>
+<div *ngIf="k">
+
+</div>
+
+
+<button (click)="kl()">add</button>

@@ -1,0 +1,75 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "name": "ryrtyrtyrtyrtyrty",
+      "id": 15,
+      "salary": 4444,
+      "domain": "ttttttttttttreyeryer"
+    },
+    {
+      "name": "sudheer",
+      "salary": 454454545,
+      "domain": "java",
+      "id": 17
+    },
+    {
+      "name": "praneeth",
+      "salary": 900005466,
+      "domain": "mean",
+      "id": 19
+    },
+    {
+      "name": "keshava",
+      "salary": 45445,
+      "domain": "spring",
+      "id": 20
+    },
+    {
+      "name": "gh4rf5tg5v",
+      "salary": 4544554,
+      "domain": "springdexfrfrrv",
+      "id": 22
+    },
+    {
+      "name": "keshava",
+      "salary": 45445,
+      "domain": "spring",
+      "id": 23
+    },
+    {
+      "name": "keshava",
+      "salary": 45445,
+      "domain": "spring",
+      "id": 24
+    },
+    {
+      "name": "keshava",
+      "salary": 45445,
+      "domain": "spring",
+      "id": 25
+    },
+    {
+      "name": "keshavareddy",
+      "salary": 45445522,
+      "domain": "spring and full stack",
+      "id": 26
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+<p>client works!</p>
+<button (click)="write()">write data</button>
+
+<button (click)="edit()">edit data</button>
+
+
+<button (click)="delete()">delete data</button>
+
+<table class="table bg-primary">
+    <tr *ngFor="let d of details">
+<td>{{d.id}}</td>
+<td>{{d.body}}</td>
+<td>{{d.price}}</td>
+<td>{{d.duration}}</td>
+<td> <button type="button" (click)="edit(d)"
+  class="btn btn-info btn" data-toggle="modal" 
+  data-target="#contact-modal">
+  edit Form</button></td>
+<td><button (click)="delete(d.id)">delete data</button></td>
+    </tr>
+</table>
+
+
+<div id="contact-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Contact Form</h3>
+			</div>
+			<form #fm="ngForm" (submit)="sub(fm.value)" id="contactForm" name="contact" role="form">
+          <div class="form-group">
+              <label for="name">id</label>
+              <input [(ngModel)]="resultid" type="text" name="id" class="form-control">
+            </div>
+        <div class="modal-body">				
+					<div class="form-group">
+						<label for="name">body</label>
+						<input [(ngModel)]="resultbody" type="text" name="body" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="price">price</label>
+						<input [(ngModel)]="resultprice"  name="price" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="duration">duration</label>
+						<input [(ngModel)]="resultduration" name="duration" class="form-control">
+					</div>					
+				</div>
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<input  type="submit" class="btn btn-success" id="submit">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- <div class="container">
+        <h2>Modal Example</h2>
+   
+       
+      
+      
+        <div  class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+          
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+             
+              <form #fm="ngForm" (submit)="sub(fm.value)">
+              <div class="modal-body">
+                   
+
+                            edit body data:
+                            {{resultedit}}
+                            <input [(ngModel)]="resultid" name="id">
+                    edit body data:
+                    {{resultedit}}
+                    <input [(ngModel)]="resultbody" name="body">
+                
+                    <br>
+                    edit price data:
+                    <input [(ngModel)]="resultprice" name="price">
+                    <br>
+                    edit duration data:
+                    
+                <input [(ngModel)]="resultduration" name="duration">
+                <button class="btn btn-danger">save</button> 
+                
+              </div>
+              
+            </form>
+                
+              
+              
+            </div>
+          </div>
+        </div>
+        
+      </div> -->
+
+
+
+
+
+
+<div *ngIf="status" style="width:350px;background:yellowgreen;">
+    <h1>edit details</h1>
+    <form #fm="ngForm" (submit)="sub(fm.value)">
+
+            edit body data:
+            {{resultedit}}
+            <input [(ngModel)]="resultid" name="id">
+    edit body data:
+    {{resultedit}}
+    <input [(ngModel)]="resultbody" name="body">
+
+    <br>
+    edit price data:
+    <input [(ngModel)]="resultprice" name="price">
+    <br>
+    edit duration data:
+    
+<input [(ngModel)]="resultduration" name="duration">
+<button>update and save</button>
+</form>
+</div>
+
